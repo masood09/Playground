@@ -2,10 +2,14 @@
 
 node('master') {
     stage('Checkout') {
-        echo 'Code checkout'
+        checkout scm
     }
 
     stage('Run tests') {
-        echo 'Running tests'
+      withMaven(maven: 'Maven 3.5.2') {
+          dir('hello-world') {
+            sh 'mvn clean test -Dwebdriver.type=chrome -Dwebdriver.chrome.driver=../drivers/chromedriver'
+          }
+      }
     }
 }
