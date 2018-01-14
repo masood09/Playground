@@ -19,3 +19,6 @@
 
 # environment secrets
 .env
+
+/hello-world/target/
+/videos/

@@ -10,7 +10,7 @@ import com.hello.world.GuiceModule;
 
 @Modules(GuiceModule.class)
 @RunWith(ConcurrentSuite.class)
-@Suite.SuiteClasses({WikipediaTest.class})
+@Suite.SuiteClasses({CheckoutTest.class})
 public class BobcatSuite {
 
 }
